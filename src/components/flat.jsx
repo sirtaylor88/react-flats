@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
 
 export default class Flat extends Component {
-  handleClick = ({ flat, onClick }) => onClick(flat.id);
+  handleClick = (e) => {
+    e.preventDefault();
+    const { flat, onClick } = this.props;
+    onClick(flat.id);
+  }
 
-  render({ flat }) {
+  render() {
+    const { flat } = this.props;
     const scriptStyle = {
       backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)),
           url(${flat.imageUrl})`

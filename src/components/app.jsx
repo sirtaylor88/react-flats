@@ -12,7 +12,7 @@ export default class App extends Component {
         lat: 47.824905,
         lng: 2.618787
       },
-      zoom: 6
+      zoom: 5
     };
   }
 
@@ -23,7 +23,7 @@ export default class App extends Component {
         lat: selectedFlat.lat,
         lng: selectedFlat.lng
       },
-      zoom: 10
+      zoom: 15
     });
   }
 

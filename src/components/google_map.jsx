@@ -8,13 +8,11 @@ const GoogleMap = ({ center, zoom }) => {
     <div className="map-container">
       <GoogleMapReact
         bootstrapURLKeys={{ key: 'AIzaSyC_EacsjLb3DeZ0_NVqTrTuDhy8ISQN77s' }}
-        defaultCenter={center}
-        defaultZoom={zoom}
+        center={center}
+        zoom={zoom}
       >
-        <Marker
-          lat={center.lat}
-          lng={center.lng}
-        />
+        {(center.lat !== 47.824905)
+        && <Marker lat={center.lat} lng={center.lng} />}
       </GoogleMapReact>
     </div>
   );
